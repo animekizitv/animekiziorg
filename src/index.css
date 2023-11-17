@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+  *{
+    @apply p-0 m-0 border-0 outline-none box-border text-white scroll-smooth;
+  }
+
+  ::-webkit-scrollbar{
+    @apply w-2 bg-gray-800 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    @apply bg-gray-700 hover:bg-gray-600 rounded-full duration-300;
+  }
+
+  html,
+  body,
+  #root,
+  .app{
+    @apply w-full h-full bg-gray-900 overflow-hidden;
+    /*background-color: rgb(39,40,39);*/
+  }
+
+  nav{
+    /*background-color: rgb(39,41,40);
+    border-color: rgb(65, 67, 68);*/
+    @apply bg-gray-800 border-gray-700;
+  }
+
+  .card{
+    /*background-color: rgb(36, 37, 37);
+    border-color: rgb(65, 68, 68);*/
+    @apply lg:h-3/6 lg:w-3/4 w-full h-full py-2 px-8 border-[1px] z-20 bg-opacity-50 backdrop-blur-[4px] rounded flex flex-col items-center gap-5 bg-gray-800 border-gray-700 overflow-auto;
+  }
+  
+  input{
+    @apply py-2 px-4 rounded border-[1px] bg-gray-700 border-gray-600 bg-opacity-50;
+    /*background-color: rgb(39, 40, 39);
+    border-color: rgb(63, 65, 65);*/
+  }
+
+  section{
+    @apply z-20;
+  }
+
+  .green{
+    @apply py-2 px-6 bg-green-600 rounded;
+  }
+
+  .link{
+    @apply text-blue-600 underline;
+  }
+  
+  @keyframes natsukianim {
+    0%{
+      left: 0;
+    }
+
+    100%{
+      left: 100%;
+    }
+  }
+
+  .natsuki{
+    position: absolute;
+    animation: natsukianim 3s linear 0.1s 1;
+  }
+
+  .privacy *{
+    @apply select-text;
+  }
+}
